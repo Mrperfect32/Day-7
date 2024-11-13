@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav .row{
+    display:flex;
+    justify-content: center;
+}
+nav{
+    background: black;
+    
+}
+nav .container{
+    width: 1200px;
+    margin: auto;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    display: inline-block;
+    padding: 20px 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+nav ul li a:hover{
+    color: orangered;
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 6px;
+    background-color: orange;
+    left: 0;
+    transition: 0.6s;
+    bottom: 0;
+}
+nav ul li a:hover:before{
+       width: 100%;
+}
+
+
+nav .parrent{
+    position: relative;
+}
+nav .parrent .child{
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    margin-top: 100px;
+    opacity: 0;
+    visibility: hidden;
+}
+nav .parrent .child li{
+    width: 200px;
+}
+nav .parrent .child li a{
+    display: block;
+}
+nav .parrent:hover .child{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.7s;
+}
+nav .today{
+    position: relative;
+}
+nav .today .after{
+    position: absolute;
+    background-color: black;
+    width: 200px;
+    margin-top: 100px;
+    opacity: 0;
+    visibility: hidden;
+}
+nav .today .after li{
+    width: 200px;
+}
+nav .today .after li a{
+    display: block;
+}
+nav .today:hover .after{
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0;
+    transition: 0.7s;
+}
